@@ -1,3 +1,218 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MathieuBreier</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: "font-family: 'Montserrat", sans-serif;
+            }
+
+            body,
+            html {
+                height: 100%;
+                color: #505050;
+                line-height: 1.8;
+                font-family: 'Montserrat',sans-serif;
+            }
+
+            /* Create a Parallax Effect */
+            .bgimg-1,
+            .bgimg-2,
+            .bgimg-3 {
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            /* First image (Logo. Full height) */
+            .bgimg-1 {
+                background-image: url('https://www.w3schools.com/w3images/parallax1.jpg');
+                min-height: 100%;
+            }
+
+            /* Second image (Portfolio) */
+            .bgimg-2 {
+                background-image: url("https://www.w3schools.com/w3images/parallax2.jpg");
+                min-height: 400px;
+            }
+
+            /* Third image (Contact) */
+            .bgimg-3 {
+                background-image: url("https://www.w3schools.com/w3images/parallax3.jpg");
+                min-height: 400px;
+            }
+
+            .w3-wide {
+                letter-spacing: 10px;
+            }
+
+            .w3-hover-opacity {
+                cursor: pointer;
+            }
+
+            /* Turn off parallax scrolling for tablets and phones */
+            @media only screen and (max-device-width: 1600px) {
+
+                .bgimg-1,
+                .bgimg-2,
+                .bgimg-3 {
+                    background-attachment: scroll;
+                    min-height: 400px;
+                }
+            }
+        </style>
+    </head>
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="../" class="w3-bar-item w3-button">HOME2</a>
+            <a href="../../aboutme/index.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT6</a>
+            <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-search"></i>
+            </a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="../aboutme/index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+            <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+            <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+        </div>
+    </div>
+
+    <!-- Profil Image -->
+    <div class="w3-center">
+      <img src="../assets/img/profilBSE.jpeg" class="w3-circle" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; margin-top: 128px;">
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about" style="text-align: center;">
+      <h3 class="w3-center">ABOUT ME</h3>
+      <p style="font-size: 18px;">We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa
+          qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="w3-row">
+      </div>
+    </div>
+
+    <!-- Skills with icons -->
+
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+        /* Add some basic styling for the columns */
+        .column {
+          display: inline-block;
+          width: 28%; /* Adjust the width as needed */
+          text-align: center;
+          margin: 35px; /* Adjust the margin to reduce spacing */
+          font-family: 'Montserrat',sans-serif;
+        }
+    
+        /* Style the emoji icons */
+        .emoji {
+          font-size: 58px;
+          color: #1a222c;
+        }
+
+            /* Set font family for text */
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+        /* Style the header */
+        h3 {
+          color: black; /* Set header text color to black */
+          font-weight: bold; /* Make the header text bold */
+          font-size: 34px; /* Increase the header text size */
+          font-family: 'Montserrat',sans-serif;
+        }
+      </style>
+    </head>
+    <!-- #https://fontawesome.com/icons/categories/coding #the website that includes all the icons and feature for color-->
+    <script src="https://kit.fontawesome.com/1cc5c5deb6.js" crossorigin="anonymous"></script>
+    <body>
+    
+    <div class="column">
+      <h3 class="w3-center" id = "contact" style= "margin-bottom: 20px;">Analyzing</h3>
+      <i class="fa-solid fa-chart-line emoji" style=" margin-bottom: 5px;"></i>
+      <i class="fa-solid fa-microscope emoji" style="margin-right: 12px; margin-left: 12px;"></i>
+      <i class="fa-solid fa-magnifying-glass-chart emoji"></i>
+      <p style="font-size: 17px;">We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    
+    <div class="column">
+      <h3 class="w3-center" style=" margin-bottom: 20px;">Developing</h3>
+      <i class="fa-solid fa-code emoji" style=" margin-bottom: 5px;"></i>      
+      <i class="fa-solid fa-file-lines emoji" style="margin-right: 12px; margin-left: 12px;"></i>
+      <i class="fa-solid fa-sitemap emoji"></i>
+      <p style="font-size: 17px;">We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    
+    <div class="column">
+      <h3 class="w3-center" style=" margin-bottom: 20px;">Communicating</h3>
+      <i class="fa-solid fa-pencil emoji" style=" margin-bottom: 5px;"></i>
+      <i class="fa-solid fa-chalkboard-user emoji" style="margin-right: 12px; margin-left: 5px;"></i> <!-- Add an emoji -->
+      <i class="fa-solid fa-comment emoji"></i>      
+      <p style="font-size: 17px;">We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="w3-container" style="margin-left: 128px; margin-right: 128px; margin-top: 64px; margin-bottom: 300px; margin-top: 100px;">
+      <div class="w3-center">
+        <h3>Contact</h3>
+        <p style="text-align: center; font-size: 18px; margin-left: 0;">You can contact me through my email: <a href="mailto:mathieu.breier@bse.eu">mathieu.breier@bse.eu</a></p>
+        <p style="text-align: left; font-size: 18px; margin-left: 330px;">
+          Follow me on these social media platforms:<br> 
+          Github: <a href="https://github.com/mtbrr26" target="_blank">https://github.com/mtbrr26</a><br> 
+          LinkedIn: <a href="https://www.linkedin.com/in/mathieu-breier/" target="_blank">https://www.linkedin.com/in/mathieu-breier/</a><br> 
+        </p>
+      </div>
+    </div>
+
+    <body>
+
+    <style>
+        /* Define the CSS for the colored footnote band */
+        .footnote {
+            background-color: #1a222c;
+            color: white; /* Text color on the blue background */
+            padding: 10px; /* Adjust the padding as needed */
+            text-align: center;
+            font-family: 'Montserrat',sans-serif; /* Center-align the text within the band */
+        }
+    </style>
+    <body>
+      <!-- Add the colored footnote band at the bottom of the page -->
+    <div class="footnote">
+      <p>&copy; Mathieu Breier</p>
+    </div>
+    </body>
+
+</html>
