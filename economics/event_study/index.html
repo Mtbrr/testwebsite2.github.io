@@ -15,14 +15,16 @@
             h4,
             h5,
             h6 {
-                font-family: "font-family: 'Montserrat", sans-serif;
+                font-family: "avenir next,avenir,sans-serif";
             }
+          
 
             body,
             html {
                 height: 100%;
-                color: #777;
+                color: #505050;
                 line-height: 1.8;
+                font-family: "avenir next,avenir,sans-serif";
             }
 
             /* Create a Parallax Effect */
@@ -70,13 +72,71 @@
                     background-attachment: scroll;
                     min-height: 400px;
                 }
+
+            /* Latex table */
+            /* Center the table */
+            .table-container {
+              text-align: center;
+              font-family: 'sans-serif';
+              display: flex;
+              justify-content: center;
+            }
+            /* ------------------------------------*/
+            .academia table {
+              border-collapse: collapse;
+              border-spacing: 0;
+              width: auto;
+              max-width: 100%;
+              border-top: 2.27px solid black;
+              border-bottom: 2.27px solid black;
+              overflow-x: auto; 
+              box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+              font-family: 'Montserrat', sans-serif; /* Set font-family */
+            }
+            .academia th,
+            .academia td {
+              border: 0 none !important;
+              text-align: left;
+              padding: 0.5rem;
+              line-height: 1.1;
+              font-size: 1.1rem; /* Adjust the font size */
+            }
+            .academia tbody tr:hover { /* Modify this line to affect the entire row */
+            background-color: #dddddd;
+            }
+            .academia table > tbody > tr:first-child > td,
+            .academia table > tbody > tr:first-child > th {
+              border-top: 1.36px solid black !important;
+            }
+            .academia table > tbody > tr:last-child > td,
+            .academia table > tbody > tr:last-child > th {
+              border-bottom: 1.36px solid black !important;
+            }
+            .academia thead th {
+                background-color: white !important;
+                font-weight: 700;
+            }
+            .academia tr:nth-child(even) { background-color: #ffffff ; 
+            }
+            /* ------------------------------------*/
             }
         </style>
+
+        <!-- Library for mathematical expression (and removing the brief message (math processing:100%)) -->
+        <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            messageStyle: "none"
+        });
+        </script>
+        <!-- Library for mathematical expression -->
+
     </head>
 <body>
-
     <!-- Navbar (sit on top) -->
-    <div class="w3-top">
+    <div class="w3-top" style = "font-family: 'Montserrat',sans-serif;">
         <div class="w3-bar" id="myNavbar">
             <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
                 href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
@@ -84,9 +144,7 @@
             </a>
             <a href="../../" class="w3-bar-item w3-button">HOME1</a>
             <a href="../../aboutme/index.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT5</a>
-            <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-                <i class="fa fa-search"></i>
+            <a href="../../#projects" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
             </a>
         </div>
 
@@ -99,112 +157,214 @@
     </div>
 
     <!-- First Parallax Image with Logo Text -->
-    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-        <div class="w3-display-middle" style="white-space:nowrap;">
-            <span class="w3-center w3-padding-large w3-xlarge w3-wide w3-animate-opacity"> Title of the paper 
+    <div class="w3-display-container" id="home">
+      <img src="../../assets/img/finance_white.avif" alt="Lights" style="width: 100vw; height: 60vh">
+        <div class="w3-display-middle" style="white-space:nowrap; text-align: center; font-family: Georgia, serif">
+            <span class="w3-center w3-padding-large w3-xxlarge w3-wide w3-animate-opacity w3-text-black">An Event Study Analysis of the Energy Sector<br> in Spain</span>
+            <br>
+            <span class="w3-center w3-padding-large w3-large w3-animate-opacity w3-text-black" style = "font-family: avenir next,avenir,sans-serif;">ECONOMICS OF ENERGY</span>
         </div>
     </div>
 
-    <!-- Container (About Section) -->
-    <div class="w3-content w3-container w3-padding-64" id="about">
-      <h3 class="w3-center">ABOUT ME123</h3>
-      <p class="w3-center"><em>I love photography</em></p>
-      <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-          cupidatat non proident, sunt in culpa
-          qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <!-- Container (Abstract) -->
+    
+  <div class="w3-content w3-container w3-padding-64" style ="max-width: 800px; margin-bottom: 50px;">
+      <h2 class="w3-center" style = "font-family: Georgia, serif">Abstract</h2>
+      <p class="w3-center">
+      <p style = "font-family: Georgia, serif; text-align: justify; font-size: 17px;">This paper studies how unexpected events affect the abnormal return of renewable companies. Exploiting firm-level data from a large sample of companies primarily operating in Spain, we seek to understand how investors in the stock markets react to three distinct unexpected events. The three events we investigate are curtailment, the Royal Decree - Law 1/2012 and the carbon policy surprises. Our findings indicate that higher levels of curtailment result in a decrease in abnormal returns for the renewable energy sector, reflecting investors’ perception of curtailment as a risk factor. We also provide evidence that the Royal Decree - Law 1/2012, which suspended all in-feed tariffs guaranteed to renewable electricity producers, had adverse effects for the entire energy sector. Lastly, we show that increases in the price of carbon are associated with a reduction in the abnormal returns for the energy sector. This aligns with other research findings that tighter carbon pricing tends to suppress economic activity and investment.</p>
       <div class="w3-row">
       </div>
   </div>
 
   <div class="w3-container w3-border-bottom" style="margin-left: 128px; margin-right: 128px;">
-<h1>Title of the paper</h1>
-<p>Author and date (reference)</p>
+<h1 style="font-size: 42px;">Analysing the Effect of Climate Events on Renewable Energy Firms Stock Prices in Spain</h1>
+<p style="margin-left: 5px; font-family: avenir next,avenir,sans-serif;">by <strong>Karishma Balu & Mathieu Breier</strong></p>
+<p></p>
+<p style="margin-left: 5px; margin-bottom: 40px; font-family: avenir next,avenir,sans-serif;"> June 2, 2023</p>
   </div>  
 
-  <div class="w3-container w3-large" style="margin-left: 128px;">
-<div class="w3-left-align">
-  <h2>Abstract</h2>
-  <p>Left aligned text.</p>
+<!--<div class="" style = 'font-family: avenir next,avenir,sans-serif;'>  defines the font for all the text below-->
+
+<!-- Container                 -->
+<!-- Container (Article)  -->
+<!-- Container                 -->
+
+
+<!-- Container (Introduction) -->
+<div style="margin-left: 228px; margin-right: 228px;">
+
+  <div class="w3-container w3-large" style="margin-top: 30px;">
+    <div class="w3-left-align">
+    <h2>1. Introduction</h2>
+    <p class="paragraph" style="text-align: justify;">According to the IPCC’s sixth assessment report on climate change, the previous decade is likely to have been the hottest period in the last 125,000 years. While the scientist community raises concerns over the climate change consequences, they also argue that global warming is reversible. To reverse centuries of high green- house gas emissions, a sound ecological transition towards renewable energies is part of the solution. In addressing this challenge, accurately estimating potential shocks on asset returns of companies operating in the renewable sectors is an imperative prerequisite to successfully guide investments to a green economy transition.<br></p>
+    <p class="paragraph" style="text-align: justify;">This paper seeks to study how unexpected events affect asset returns. Specifically, we analyse firm-level data from a large sample of companies primarily operating in Spain to understand how investors in the stock markets react to unexpected policies or climate shocks. To answer this question, we focus our analysis on three major events. Firstly, we look at curtailment, i.e. an event specific to wind farms where grid operators ask energy producers to reduce their supply because the demand is too low or there is congestion in the grid. The second event consists of the implementation of the Royal Decree - Law 1/2012, which introduced changes to the electricity tariff structure and removed subsidies for non-renewable energy projects. The third event focuses on carbon policy surprises, defined as unexpected changes in the pricing of carbon emissions.<br></p>
+    <p class="paragraph" style="text-align: justify;">The growing amount of wind power capacity within the Spanish electricity system significantly affects both the operation and costs of the energy system. This noteworthy impact brought about by wind power is particularly concerning due to the limited interconnections of the Iberian Peninsula Power System with other nations. In this situation, the power system’s security, reliability, and stability can be significantly influenced by the curtailment of wind energy. In our study, we define curtailment as the process whereby wind energy producers are requested to reduce their output in order to balance demand and supply or to ensure grid stability. This process aims to prevent the electricity price from reaching zero due to an excess supply, which would encourage energy producers from ceasing their generation of electricity.<br></p>
+    <p class="paragraph" style="text-align: justify;">While wind power curtailment is commonly accepted as a suitable solution to mitigate these problems, it also constitutes a waste in green energy that could be avoided by improving storage systems or the structure of the grid. Moreover, curtailing windenergy does not only imply an underutilization of renewable energy, but it also disincentivizes investors from financing renewable energy projects. In addition, its associated cost, estimated to 807 millions euros in Germany in 2021, could also encourage the use of dirty energy production as an alternative. Considering that experts anticipate an increase in curtailment of clean energy as penetration keeps growing, our study aims to quantify the impact of this process on the stock returns of renewable energy companies in Spain.<br></p>
+    <p class="paragraph" style="text-align: justify;">We argue in our analysis that investors in the electricity sector exhibit a negative reaction in response to high curtailment events. These events increase uncertainty and investment risk in the renewable sector, thus encouraging investors to sell their shares in renewable companies after events of high curtailment. Consequently, we expect to observe a slight negative decline in the stock market return of renewable companies after events of high curtailment. It is noteworthy to mention that we assume investors do not factor in curtailment when making investment decisions, meaning that high curtailment levels come as a surprise to the stock market. Our findings indicate that an increase in curtailment leads to a reduction of 0.2% in the stock abnormal returns for the renewable energy sector.<br></p>
+    <p class="paragraph" style="text-align: justify;">The Royal Decree - Law 1/2012 enacted the 28th of January 2012 announced the complete suspension of all feed-in tariffs guaranteed to renewable electricity producers. This decision entailed the removal of specific payment rates for the electricity generated and fed into the grid by the renewable energy producers. Prior to that, payment rates were generally set higher than the market price for electricity to en- courage energy production and also attract investments in the sector. As a result of the policy, renewable energy producers would no longer be financially supported to offset the higher costs associated with renewable energy technologies compared to more conventional energy sources. We claim that the Royal Decree - Law 1/2012 had negative effects on the stock abnormal returns of the renewable companies. Our findings demonstrate that the Royal Decree - Law 1/2012 had adverse effects for the entire energy sector.<br></p>
+    <p class="paragraph" style="text-align: justify;">In light of the COP26 objectives, carbon pricing plays a critical role in accelerating the global efforts to fight climate change. Carbon pricing operates by imposing a cost on greenhouse gas emissions, thereby incentivizing the reduction of carbon emissions. In our study, we seek to quantify how carbon policy surprises affect the stock return of renewable energy companies. To carry out our analysis, we utilize a dataset provided by Diego Känzig, where carbon policy surprises are measured as the difference in carbon price in euro relative to the prevailing wholesale electricity price and as percentage change of the carbon price. Building on the existing literature, we anticipate that carbon policy surprises would negatively impact companies in the energy sector, as evidence suggests that increases in carbon pricing tend to slow down economy growth and reduce investment (Känzig, 2023). Our findings indicate that an increase in the price of carbon is associated with a reduction in the abnormal returns for the energy sector by 0.04%.<br></p>
+    <strong>Roadmap: </strong> The paper proceeds as follows. In the next section, we review the literature and contributions for each event. Section 3 details our empirical strategy. Section 4 presents the results on curtailment, the Royal Decree - Law 1/2012 and the carbon policy surprises. Section 5 covers the robustness checks. Section 6 discusses the implications of our results for climate policies and concludes our study.
+    </div>
+  </div>
+
+<!-- Container (Development) -->
+  <div class="w3-container w3-large" style="margin-top: 30px;">
+    <div class="w3-left-align">
+    <h2>2. Literature Review and Contributions</h2>
+    <p class="paragraph" style="text-align: justify;">This study contributes to the growing literature analyzing the effects of climate events, policies and carbon pricing on stock returns. Multiple studies have investigated how unforeseen climate change events affect stock market returns. Antoniuk and Leirvik (2021) find that unexpected events related to climate significantly im- pact stock abnormal returns. We incorporate in our study the method they employ to compute the firms’ abnormal return. The method itself was originally introduced by Sharpe (1964) and Linter (1965). In addition, they show that the presence of significant abnormal return variations indicate a delay in the market’s pricing of new information. We validate this result by finding that high curtailment events have a significant impact on stock abnormal returns and that the market takes some time to adjust.</p>
+    <p class="paragraph" style="text-align: justify;">In a similar vein, Kuang et al. (2021) specifically study the effects of the 2016 Paris Agreement on investment behaviors. Using an event study methodology, they find that while the treaty had limited overall effects on green companies, its implementation appeared to have a statistically negative impact. Furthermore, U-Din et al. (2022) explore the influence of weather catastrophes on the Canadian stock market over a 20-year period. They discover that extreme weather events significantly de- crease stock markets returns. Supported by these findings, Pagnottoni et al. (2022) find that climatological events have the most extreme reactions on international financial markets among disaster types. Employing an event study methodology, they examine the effects of multiple disaster types on 27 global stock market indexes from 2001 to 2019. While the impacts on stock markets differ depending on the type of disaster, climatological events predominantly exhibit significant negative effects on financial markets. The literature confirms our beliefs that stock markets are likely to respond to unexpected events.</p>
+    <p class="paragraph" style="text-align: justify;">Our study is structured into three distinct sections: curtailment, Royal Decree - Law 1/2012, and carbon policy surprises. In the following discussion, we review the literature and contributions for each of these sections.</p>
+    <p class="paragraph" style="text-align: justify;">Several studies have tried to quantify and study the consequences of wind curtailment. We reviewed the literature studying the effects of wind power curtailment on various economic aspects. Ye et al. (2018) find that the opportunity cost of wind curtailment is estimated to have exceeded $1.2 billion in China from 2004 to 2006. Joos and Staffell (2018) estimate a 27-fold increase in wind curtailment between 2010 and 2016 in Germany. Moreover, they find that the quantity and cost of wind curtailment has grown substantially in Britain, rising from 45 to 1123 GWh between 2012 and 2016, and from £5.9 million to £81.9 million. Additionally, the Spanish Wind Energy Association estimates economic losses due to curtailments from 2011 to the beginning of 2013 to be approximately €70 million (Martín-Martínez et al., 2014).</p>
+    <p class="paragraph" style="text-align: justify;">The literature suggests that stock markets would negatively react to high level of curtailment. Moreover, the costs associated to curtailment emphasize the importance of accurately estimating the effects of wind power curtailment on the renewable companies in Spain. This evaluation is crucial to guarantee the stability, reliability, and security of the grid, especially considering the expected increase in wind penetration in the future. Our contribution to the literature lies in providing new estimates of the effects of wind curtailment on the stock abnormal return of renewable energy companies primarily operating in Spain. To the best of our knowledge, this study is the first to try to evaluate the impacts of curtailment on the abnormal return of renewable companies in Spain.</p>
+    <p class="paragraph" style="text-align: justify;">The effects of policies on the economy also benefit from a wide literature. In our analysis, we investigate the impacts of the Royal Decree - Law 1/2012, announced on the 27th January 2012 and implemented on the 28th January 2012, that modified the tariffs structure for renewable electricity producers in Spain. To understand the response of the stock market to unexpected policies, we reviewed some stud- ies in line with our research and methodology. Pastor and Veronesi (2012) studied how changes in government policy affect stock prices. Their findings reveal that on average, stock prices fall at the announcement of a policy change. This result indicates that the uncertainty related to new policies leads to a decrease in investment, thus resulting in negative effects on stock prices. Their finding suggests that a part of our result will probably incorporate the uncertainty associated to the policy announcement.</p>
+    <p class="paragraph" style="text-align: justify;">Furthermore, to understand the effects of the support scheme modification for renewable companies in Spain, we supported our analysis with the study of Lesser and Su (2008). They find that feed-in tariffs (FITs), when designed correctly, provide long-term financial stability for investors in renewable energy technologies (RETs). Similarly, Mitchell and Connor (2004) highlight the ability of FITs to reduce financial risks for RETs developers. We contribute to their studies by specifically analyzing the impacts of the Royal Decree - Law 1/2012 on the stock markets using an event study methodology. Supported by the literature, we expect to find that the cancellation of the feed-in tariffs scheme in Spain had a negative impact on the stock return of renewable energy companies.</p>
+    <p class="paragraph" style="text-align: justify;">Carbon pricing is a key element in achieving the carbon neutrality by 2050 set by the 2015 Paris Agreement. We reviewed the literature investigating the effects of carbon pricing surprises on the stock markets. In our analysis, we seek to evaluate the relationship between carbon policy surprises and the stock abnormal return of renewable companies. We claim that carbon pricing shocks would negatively impact companies operating in the energy sector, including renewable and non renewable companies. Previous studies demonstrate that environmental regulation can affect productivity because it forces firms to commit resources to non-productive uses such as environmental auditing, waste treatment and litigation (Gray and Shadbegian, 1995; Haveman and Christainsen, 1981). Furthermore, evidence suggest that tighter carbon pricing regime leads to significant increases in energy prices, resulting in a fall in income. This, in turn, implies a temporary fall in economic activity, as poorer households lower their consumption and investment significantly (Ka ̈nzig, 2023).</p>
+    <p class="paragraph" style="text-align: justify;">In their studies, Hamilton (1995); White (1995); Klassen and McLaughlin (1996) use an event study to demonstrate that news of high toxic emission levels result in a significant reduction of the abnormal returns. This could indicate that carbon policy surprises, related to high levels of emissions, would negatively impact the abnormal return of companies in the energy sector. Finally, Ramiah et al. (2013) find that the carbon pollution reduction scheme (CPRS) announcement, a cap- and-trade emissions trading scheme for greenhouse gases, had a significant negative impact on the Australian stock market. More specifically, they observed a 2.84% reduction in the oil and gas sector abnormal return following the announcement of the policy.</p>
+    <p class="paragraph" style="text-align: justify;">The literature tends to indicate that carbon policy surprises, measured as carbon price variations, would have significant impact on the abnormal return of energy companies. Namely, we expect the abnormal return of energy companies to negatively respond to an increase in carbon prices. In our study, we evaluate the effects of carbon policy surprises on the abnormal return of the renewable companies operating in Spain. In particular, we explore whether our results support the evidence suggested by Känzig (2023) that stricter carbon pricing regimes lead to a temporary fall in economic activity and investment, thereby leading to a decline in the abnormal return of renewable companies.</p>
+    </div>
+  </div>
+
+  <div class="w3-container w3-large" style="margin-top: 30px;">
+    <div class="w3-left-align">
+    <h2>3. Empirical Strategy</h2>
+    </div>
+  </div>
+
+  <div class="w3-container w3-large" style="margin-top: 30px;">
+    <div class="w3-left-align">
+    <h3>3.1. Data</h3>
+    <p class="paragraph" style="text-align: justify;">The data used in this paper is collected from a few sources. The main part of the data relating to the stock prices was collected from Yahoo Finance. This data includes the open price and close price for the stocks at a daily level. It is important to note that for the three analyses we conduct in this paper we use different time periods. In order to study the effects of wind energy curtailment and carbon policy surprises on the abnormal return of firms in the energy sector we look at daily stock prices for the year 2019. This decision stems from the desire to examine a period prior to the pandemic and the energy crisis in Europe, aiming to establish a baseline or reference point that reflects more “typical” or “pre-crisis” conditions. On the other hand, since the Royal Decree - Law 1/2012 was passed in January of 2012, we chose to study the daily stock prices for both years of 2011 and 2012 in order to observe a sufficient number of days in periods before and after the decree.</p>
+    <p class="paragraph" style="text-align: justify;">The sample of firms chosen for both the separate time periods varies slightly because of the limited availability of high-frequency stock data going back over 10 years to 2011. Some of the companies whose data is available in 2019 were not yet listed in 2011 and so were not included in the analysis. An interesting point to note is that we classify the sectors that the firms belong to using the classification provided by the Bolsa de Madrid or BME which is the largest stock exchange in Spain. We also obtain and use the prices associated with the IBEX35, which is the benchmark stock index of the BME. It is calculated as a weighted average of 35 of Spain’s most liquid stocks. We use the returns from this stock as a benchmark to indicate average market returns in order to control for systematic shocks that affect multiple sectors or the entire economy.</p>
+    <p class="paragraph" style="text-align: justify;">For the curtailment analysis in 2019 we use a sample of 29 firms from 17 different sectors. The table 1 gives the mean and standard deviation of the open price and close price for each of the sectors for this year. Our sample consists of 3 firms in the renewable energy sector, Audax, Grenergy and Solaria-Energia. From the table we can see that the mean for the renewable energy sector is approximately 5 euros and the standard deviation is not very large since it is 3.3. The three sectors of electricity, natural gas and oil and gas together comprise the non-renewable sector. The renewable and non-renewable sectors combined represents the energy sector as a whole in Spain.</p>
+      <div class="table-container">
+      <caption"><b>Table 1</b> - Descriptive Statistics for 2019</caption>
+      <table class="academia"><thead><tr><th> Sector </th><th> No. of Firms </th><th> Mean Open Price </th><th> S.d Open Price </th><th> Mean Close Price </th><th> S.d Close Price </th></tr></thead><tbody><tr><td> Airport </td><td> 1 </td><td> 163.512 </td><td> 8.885 </td><td> 163.578 </td><td> 8.750 </td></tr><tr><td> Aviation </td><td> 1 </td><td> 5.949 </td><td> 0.881 </td><td> 5.948 </td><td> 0.886 </td></tr><tr><td> Construction </td><td> 1 </td><td> 93.621 </td><td> 6.764 </td><td> 93.718 </td><td> 6.653 </td></tr><tr><td> Consumer Defence </td><td> 1 </td><td> 18.780 </td><td> 0.589 </td><td> 18.802 </td><td> 0.582 </td></tr><tr><td> Electricity </td><td> 3 </td><td> 16.629 </td><td> 6.148 </td><td> 16.636 </td><td> 6.149 </td></tr><tr><td> Financial Services </td><td> 4 </td><td> 4.463 </td><td> 1.439 </td><td> 4.461 </td><td> 1.439 </td></tr><tr><td> Industrials </td><td> 3 </td><td> 15.115 </td><td> 5.771 </td><td> 15.140 </td><td> 5.759 </td></tr><tr><td> Infrastructure Management </td><td> 1 </td><td> 23.128 </td><td> 2.784 </td><td> 23.177 </td><td> 2.771 </td></tr><tr><td> Insurance </td><td> 1 </td><td> 2.526 </td><td> 0.103 </td><td> 2.526 </td><td> 0.103 </td></tr><tr><td> IT Services </td><td> 1 </td><td> 8.973 </td><td> 0.937 </td><td> 8.970 </td><td> 0.941 </td></tr><tr><td> Natural Gas </td><td> 2 </td><td> 23.586 </td><td> 1.852 </td><td> 23.592 </td><td> 1.849 </td></tr><tr><td> Oil and Gas </td><td> 1 </td><td> 14.437 </td><td> 0.675 </td><td> 14.428 </td><td> 0.677 </td></tr><tr><td> Pharmaceuticals </td><td> 2 </td><td> 21.285 </td><td> 3.730 </td><td> 21.299 </td><td> 3.798 </td></tr><tr><td> Real Estate </td><td> 1 </td><td> 12.170 </td><td> 0.618 </td><td> 12.175 </td><td> 0.614 </td></tr><tr><td> Renewable Energy </td><td> 3 </td><td> 5.459 </td><td> 3.285 </td><td> 5.456 </td><td> 3.280 </td></tr><tr><td> Steel </td><td> 1 </td><td> 8.756 </td><td> 0.788 </td><td> 8.750 </td><td> 0.792 </td></tr><tr><td> Telecommunications </td><td> 2 </td><td> 18.631 </td><td> 12.367 </td><td> 18.645 </td><td> 12.380 </td></tr><tr><td> IBEX35 </td><td></td><td> 9391.356 </td><td> 432.8974 </td><td> 9387.024 </td><td> 431.654 </td></tr></tbody></table>
+      </div>
+    <p class="paragraph" style="text-align: justify;">Similarly, the table 2 displays some descriptive statistics for the sample of 24 firms from 14 sectors for the years of 2011-2012 that we use for the other event we anal- yse. In this sample we only have 2 firms in the renewable energy sector, Audax and Solaria-Energia. However, the number of firms in the non-renewable sector stays the same. From the table we see that the mean and standard deviation for the renewable energy sector are even lower than in 2019 at just approximately 1 euro and 0.5 respectively. After collecting all the data about the individual firms in each of the sectors we then appended all the data to create a panel dataset containing the daily stock price data for all the firms which we could use in our analyses.</p>
+      <div class="table-container">
+      <caption"><b>Table 2</b> - Descriptive Statistics for 2011</caption>
+      <table class="academia"><thead><tr><th> Sector </th><th> No. of Firms </th><th> Mean Open Price </th><th> S.d Open Price </th><th> Mean Close Price </th><th> S.d Close Price </th></tr></thead><tbody><tr><td> Construction </td><td> 1 </td><td> 58.450 </td><td> 12.322 </td><td> 58.447 </td><td> 12.316 </td></tr><tr><td> Consumer Defence </td><td> 1 </td><td> 14.237 </td><td> 1.183 </td><td> 14.238 </td><td> 1.183 </td></tr><tr><td> Electricity </td><td> 3 </td><td> 10.297 </td><td> 5.596 </td><td> 10.288 </td><td> 5.593 </td></tr><tr><td> Financial Services </td><td> 4 </td><td> 4.735 </td><td> 1.953 </td><td> 4.732 </td><td> 1.953 </td></tr><tr><td> Industrials </td><td> 3 </td><td> 15.815 </td><td> 13.723 </td><td> 15.787 </td><td> 13.696 </td></tr><tr><td> Infrastructure Management </td><td> 1 </td><td> 9.063 </td><td> 0.862 </td><td> 9.063 </td><td> 0.865 </td></tr><tr><td> Insurance </td><td> 1 </td><td> 2.311 </td><td> 0.337 </td><td> 2.309 </td><td> 0.338 </td></tr><tr><td> IT Services </td><td> 1 </td><td> 10.690 </td><td> 2.571 </td><td> 10.683 </td><td> 2.571 </td></tr><tr><td> Natural Gas </td><td> 2 </td><td> 13.445 </td><td> 1.793 </td><td> 13.445 </td><td> 1.796 </td></tr><tr><td> Oil and Gas </td><td> 1 </td><td> 19.145 </td><td> 3.870 </td><td> 19.131 </td><td> 3.871 </td></tr><tr><td> Pharmaceuticals </td><td> 2 </td><td> 13.633 </td><td> 9.928 </td><td> 13.598 </td><td> 9.886 </td></tr><tr><td> Renewable Energy </td><td> 2 </td><td> 0.919 </td><td> 0.484 </td><td> 0.915 </td><td> 0.483 </td></tr><tr><td> Steel </td><td> 1 </td><td> 10.295 </td><td> 1.898 </td><td> 10.277 </td><td> 1.888 </td></tr><tr><td> Telecommunications </td><td> 1 </td><td> 13.318 </td><td> 2.915 </td><td> 13.312 </td><td> 2.903 </td></tr><tr><td> IBEX35 </td><td></td><td> 8601.018 </td><td> 1330.215 </td><td> 8595.895 </td><td> 1329.288 </td></tr></tbody></table>
+      </div>
+    <p class="paragraph" style="text-align: justify;">In order to analyse the effect of curtailment we needed data on the amount of energy curtailed in Spain on a daily basis for 2019. We obtained this information from the website of the Spanish electricity operator Red Electrica. Curtailment was measured as the amount of redispatched electricity in Mega Watt hours (MWh). This is the amount of energy that the operator tells the firm to curb from their production in order to not overload the grid or during periods of low demand. We had the redispatch data by wind farm for Spain at an hourly level, which we collapsed in order to get the total daily curtailment in Spain. The table 3 displays the amount of energy curtailed for the three days where curtailment occurred in 2019. Since the phenomenon occurred for so few days in the year we can assume that curtailment is a fairly random phenomenon and so provides an exogenous shock to the market. The variable of curtailment is measured as a negative value since it is a measure of the energy production being curbed. However, in our analysis we use the standardised version of this variable so its sign does not interfere with the interpretation of the results obtained.</p>
+      <div class="table-container">
+      <caption"><b>Table 3</b> - Descriptive Statistics Curtailment</caption>
+      <table class="academia"><thead><tr><th> Date </th><th> Amount Curtailed (MWh) </th></tr></thead><tbody><tr><td>1 April 2019</td><td>-102.8</td></tr><tr><td>5 August 2019</td><td>-25.2</td></tr><tr><td>19 December 2019</td><td>-19255.7</td></tr></tbody></table>
+      </div>
+    <p class="paragraph" style="text-align: justify;">The figure 1 plots the daily carbon policy surprise variable which is a measure of the percentage change in carbon price relative to the wholesale electricity price for 2019. From the figure we can observe that there is a lot of variation seen in the data. The red line corresponds to the week of 9 December 2018 which we choose arbitrarily as the week to use while displaying our event study results. We chose this week because its average change in carbon pricing fell in the 99th percentile of the data.</p>
+      <div style="text-align: center;">
+        <caption"><b>Figure 1</b> - Carbon Policy Surprise</caption>
+        <img src="../../assets/img/Percentage change of the carbon price - Carbon Policy Surprise.png" alt="Figure 1: Carbon Policy Surprise" style="width: 50vw; height: 50vh; display: block; margin: 0 auto;" />
+      </div>    
+    </div>
+  </div>
+
+  <div class="w3-container w3-large" style="margin-top: 30px;">
+    <div class="w3-left-align">
+    <h3>3.2. Abnormal Return</h3>
+    <p class="paragraph" style="text-align: justify;">Event studies, especially in finance and accountancy, focus on analysing the effect that the event has on the abnormal returns (AR) that are obtained on the stock market. Abnormal returns are defined as the difference between the actual returns obtained from the market and the expected returns for the stock based on general market trends and historical data on how the stock performed. Abnormal returns are chosen since they help identify the extra returns obtained over what is expected under normal market conditions. Also, by studying the abnormal returns we can isolate the effect that the event has on the returns obtained by a firm. In order to calculate the abnormal returns we first need to estimate the returns that a firm gets on a daily basis. The daily returns can be calculated using the following formula:</p>
+      <p>$$ \text{Daily Returns} = \left( \frac{\text{OpenPrice} - \text{ClosePrice}}{\text{OpenPrice}} \right) \times 100 $$</p>
+    <p class="paragraph" style="text-align: justify;">In order to calculate the expected returns of the stock, we use the Capital Asset Price Model (CAPM) which was introduced by Sharpe (1964) and Linter (1965). The CAPM model uses the information for how the market is performing in order to calculate the expected returns by using the estimates from the following regression.</p>
+      <p>$$R_{it} = \beta_0 + \beta_M R_{mt} +\epsilon_{it}$$</p>
+    <p class="paragraph" style="text-align: justify;">\(R_{mt}\) is the returns to the market portfolio in time period \(t\). In the Spanish context, the market portfolio is the IBEX35. In this model, \(\beta_M\) captures the systematic risk associated with the investment and tells us how sensitive the returns of that firm are to the overall market trends. The expected returns can then be calculated using the estimates from this regression as seen in the equation below. </p>
+    </div>
+  </div>
+
+  <div class="w3-container w3-large" style="margin-top: 30px;">
+    <div class="w3-left-align">
+    <h3>Empirical method</h3>
+    <p style="text-align: justify;">We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+    </div>
+  </div>
+
+  <div class="w3-container w3-large" style="margin-top: 30px;">
+    <div class="w3-left-align">
+    <h2>Results</h2>
+    <p style="text-align: justify;">We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+    </div>
+  </div>
+
+    <div class="w3-container w3-large" style="margin-top: 30px;">
+  <div class="w3-left-align">
+    <h2>Robustness checks</h2>
+    <p style="text-align: justify;">We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+    </div>
+  </div>
+
+  <div class="w3-container w3-large" style="margin-top: 30px;">
+    <div class="w3-left-align">
+    <h2>Conclusions</h2>
+    <p style="text-align: justify;">We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. .</p>
+    </div>
+  </div>
+
+  <div class="w3-container w3-large" style="margin-top: 30px;">
+    <div class="w3-left-align">
+    <h2>References</h2>
+    <p style="text-align: justify;">We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+    </div>
+  </div>
+
+  <div class="w3-container w3-large" style="margin-top: 30px;">
+    <div class="w3-left-align">
+    <h2>Appendix</h2>
+    <p style="text-align: justify;">We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+    </div>
+  </div>
+
+<div class="w3-container w3-large" style="margin-top: 30px; margin-bottom: 130px;">
+  <div class="w3-left-align">
+    <h2>You can download the full paper here : </h2>
+      <p style="margin-left: 60px;"><i class="fa fa-arrow-right w3-text-black"></i>
+        <a href="../event_study/Event Study - Karishma Balu&Mathieu Breier.pdf" download> An Event Study Analysis of the Energy Sector in Spain</a>
+      <p>
+        
+      </p>
+      <p style="margin-left: 60px;"><i class="fa fa-arrow-right w3-text-black"></i> The Github repository: <a href="https://github.com/mtbrr26" target="_blank">https://github.com/mtbrr26</a><br> 
+      </p> 
   </div>
 </div>
 
-  <div class="w3-container w3-large" style="margin-left: 128px;">
-<div class="w3-left-align">
-  <h2>Introduction</h2>
-  <p>Left aligned text.</p>
+</div><!--defines the margin left and right for the whole text of the article -->
+
+<!--</div>  <!--defines the font for all the text -->
+
+</body>
+
+
+<style>
+  /* Define the CSS for the colored footnote band */
+  .footnote {
+      background-color: #1a222c;
+      color: white; /* Text color on the blue background */
+      padding: 10px; /* Adjust the padding as needed */
+      text-align: center;
+      font-family: "avenir next,avenir,sans-serif"; /* Center-align the text within the band */
+  }
+</style>
+<body>
+  
+<!-- Add the colored footnote band at the bottom of the page -->
+<div class="footnote">
+
+  <!-- Contact Section -->
+  <div class="w3-container" style="margin-left: 128px; margin-right: 128px; margin-bottom: 30px; margin-top: 30px;">
+    <div class="w3-left-align">
+      <h2>Contact</h2>
+      <p style="text-align: left; font-size: 16px; margin-left: 0px;">You can contact me through my email: <a href="mailto:mathieu.breier@bse.eu">mathieu.breier@bse.eu</a></p>
+      <p style="text-align: left; font-size: 16px; margin-left: 0px;">
+        You can download my CV <a href="../Breier_Mathieu_CV_Website.pdf" download>here</a></p>
+        <p></p>
+      
+      <p style="text-align: left; font-size: 16px; margin-left: 0px;">
+        Follow me on these social media platforms:<br> 
+        Github: <a href="https://github.com/mtbrr26" target="_blank">https://github.com/mtbrr26</a><br> 
+        LinkedIn: <a href="https://www.linkedin.com/in/mathieu-breier/" target="_blank">https://www.linkedin.com/in/mathieu-breier/</a><br> 
+      </p>
+    </div>
   </div>
+
+<p>&copy; Mathieu Breier</p>
 </div>
-
-  <div class="w3-container w3-large" style="margin-left: 128px;">
-<div class="w3-left-align">
-  <h2>Development1 (literature review and contributions)</h2>
-  <p>Left aligned text.</p>
-  </div>
-</div>
-
-  <div class="w3-container w3-large" style="margin-left: 128px;">
-<div class="w3-left-align">
-  <h2>Development2 (Empirical strategy)</h2>
-  <p>Left aligned text.</p>
-  </div>
-</div>
-
-  <div class="w3-container w3-large" style="margin-left: 128px;">
-<div class="w3-left-align">
-  <h3>Data</h3>
-  <p>Left aligned text.</p>
-  </div>
-</div>
-
-  <div class="w3-container w3-large" style="margin-left: 128px;">
-<div class="w3-left-align">
-  <h3>Empirical method</h3>
-  <p>Left aligned text.</p>
-  </div>
-</div>
-
-  <div class="w3-container w3-large" style="margin-left: 128px;">
-<div class="w3-left-align">
-  <h2>Results</h2>
-  <p>Left aligned text.</p>
-  </div>
-</div>
-
-  <div class="w3-container w3-large" style="margin-left: 128px;">
-<div class="w3-left-align">
-  <h2>Robustness checks</h2>
-  <p>Left aligned text.</p>
-  </div>
-</div>
-
-<div class="w3-container w3-large" style="margin-left: 128px;">
-<div class="w3-left-align">
-  <h2>Conclusions</h2>
-  <p>Left aligned text.</p>
-  </div>
-</div>
-
-<div class="w3-container w3-large" style="margin-left: 128px;">
-<div class="w3-left-align">
-  <h2>References</h2>
-  <p>Left aligned text.</p>
-  </div>
-</div>
-
-<div class="w3-container w3-large" style="margin-left: 128px;">
-<div class="w3-left-align">
-  <h2>Appendix</h2>
-  <p>Left aligned text.</p>
-  </div>
-</div>
-
-
 </body>
 
 </html>
