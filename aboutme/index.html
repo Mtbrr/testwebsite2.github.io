@@ -71,6 +71,51 @@
                     background-attachment: scroll;
                     min-height: 400px;
                 }
+
+                /* Skills with icons */
+                #about {
+                  width: 90%;
+                  margin: 0 auto;
+                  max-width: 960px;
+                }
+                @media only screen and (min-width: 550px) {
+                  #about {
+                    width: 80%;
+                  }
+                }
+
+                .tech {
+                  margin: 50px;
+                }
+
+                .user {
+                  text-align: center;
+                  font-size: 60px;
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: wrap;
+                  justify-content: space-between;
+                }
+                .user p {
+                  font-size: 17px;
+                }
+                @media only screen and (min-width: 550px) {
+                  .user {
+                    flex-wrap: nowrap;
+                    font-size: 75px;
+                  }
+                }
+
+                .user-details {
+                  text-align: center;
+                  margin: 5px auto;
+                }
+
+                .icons {
+                  color: #505050;
+                }
+              /* Skills with icons */
+
             }
         </style>
     </head>
@@ -83,8 +128,8 @@
                 href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
                 <i class="fa fa-bars"></i>
             </a>
-            <a href="../" class="w3-bar-item w3-button">HOME2</a>
-            <a href="../../aboutme/index.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT6</a>
+            <a href="../" class="w3-bar-item w3-button">HOME</a>
+            <a href="../../aboutme/index.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT ME</a>
             <a href="../#projects" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
             <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-search" onclick="find();"></i></a>-->
             </a>
@@ -92,7 +137,7 @@
 
         <!-- Navbar on small screens -->
         <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-            <a href="../aboutme/index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+            <a href="../aboutme/index.html" class="w3-bar-item w3-button" onclick="toggleFunction()"> ABOUT ME</a>
             <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
             <a href="#" class="w3-bar-item w3-button">SEARCH</a>
         </div>
@@ -100,7 +145,7 @@
 
     <!-- Profil Image -->
     <div class="w3-center">
-      <img src="../assets/img/profilBSE.jpeg" class="w3-circle" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; margin-top: 128px;">
+      <img src="/assets/img/profilBSE.jpeg" class="w3-circle" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; margin-top: 128px;">
     </div>
 
     <!-- Container (About Section) -->
@@ -119,10 +164,39 @@
         Throughout this journey, I've witnessed the incredible potential of data science across diverse fields, 
         and I'm thrilled to be a part of its transformative impact. On my website, I eagerly share my experiences, 
         insights, and ongoing projects in the world of data science and economics of energy.</p>
-      <div class="w3-row">
-      </div>
+      <div class="w3-row"></div>
     </div>
 
+        <!-- Skills with icons -->
+    <!-- Skills with icons -->
+      <!-- Skills with icons -->
+
+  <div class="user">
+    <div class="tech">
+      <h2>Design</h2>
+      <i class="fa-solid fa-chart-line emoji"></i>
+      <i class="fa-solid fa-microscope emoji"></i>
+      <i class="fa-solid fa-magnifying-glass-chart emoji"></i>
+      <p>In a wide range of subject areas, I have analyzed structured and unstructured data to extract actionable business insights. I love to create captivating and insightful visual representations that bring out unexpected findings.</p>
+    </div>
+    <div class="tech">
+      <h2>Code</h2>
+      <i class="fa-solid fa-code emoji"></i>
+      <i class="fa-solid fa-file-lines emoji"></i>
+      <i class="fa-solid fa-sitemap emoji"></i>
+      <p>With a strong foundation in data science acquired from my master's degree in data science for decision making, I've enhanced my developing skills to bring machine learning models to life and create impactful, data-driven solutions.</p>
+    </div>
+    <div class="tech">
+      <h2>Tools</h2>
+      <i class="fa-solid fa-pencil emoji"></i>
+      <i class="fa-solid fa-chalkboard-user emoji"></i>
+      <i class="fa-solid fa-comment emoji"></i>
+      <p>I enjoy writing professional articles, sharing my expertise, and engaging in conversations on a wide array of subjects. My background in economic science and management allows me to effectively present complex findings to non-technical audiences</p>
+    </div>
+  </div>
+
+    <!-- Skills with icons -->
+    <!-- Skills with icons -->
     <!-- Skills with icons -->
 
     <head>
